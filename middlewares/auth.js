@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
   if (!authorization || !authorization.startsWith('Bearer ')) {
     return res
       .status(UNAUTHORIZED_CODE)
-      .send({ message: 'Autenticación requerida. No se proporcionó token.' });
+      .send({ message: 'Authentication required. No token was passed.' });
   }
 
   const token = authorization.replace('Bearer ', '');
@@ -27,6 +27,6 @@ module.exports = (req, res, next) => {
   } catch (err) {
     return res
       .status(FORBIDDEN_CODE)
-      .send({ message: 'Acceso prohibido. Token inválido.' });
+      .send({ message: 'Access denied. Invalid token.' });
   }
 };
