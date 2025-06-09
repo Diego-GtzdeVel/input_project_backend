@@ -10,6 +10,8 @@ module.exports.getProjects = (req, res, next) => {
 };
 
 module.exports.createProject = (req, res, next) => {
+  const { title, text } = req.body;
+
   Project.create({ title, text, owner: req.user._id })
     .then((project) => res.status(201).send(project))
     .catch((err) => {
@@ -34,7 +36,7 @@ module.exports.deleteProject = (req, res, next) => {
       }
 
       return Project.findByIdAndDelete(projectId)
-        .then (() => res.send({ message: 'Project deleted' }));
+        .then(() => res.send({ message: 'Project deleted' }));
     })
     .catch((err) => {
       if (err.name === 'CastError') {

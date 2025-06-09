@@ -6,8 +6,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const { login, createUser } = require('./controllers/users');
-const usersRouter = require('./routes/users');
-const projectsRouter = require('./routes/projects');
+const usersRouter = require('./routes/users')
+const projectsRouter = require('./routes/projects')
 const auth = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -44,5 +44,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server runnign in port ${PORT}`);
+  console.log(`Server running in port ${PORT}`);
 });

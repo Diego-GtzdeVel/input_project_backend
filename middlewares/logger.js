@@ -4,7 +4,7 @@ const path = require('path');
 
 const jsonFormat = format.combine(
   format.timestamp(),
-  format.json()
+  format.json(),
 );
 
 const requestLogger = expressWinston.logger({
