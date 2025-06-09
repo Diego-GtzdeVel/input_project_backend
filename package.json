@@ -1,0 +1,36 @@
+{
+  "name": "input_project_backend",
+  "version": "1.0.0",
+  "description": "INPUT website API",
+  "keywords": [
+    "INPUT"
+  ],
+  "homepage": "https://github.com/Diego-GtzdeVel/input_project_backend#readme",
+  "bugs": {
+    "url": "https://github.com/Diego-GtzdeVel/input_project_backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diego-GtzdeVel/input_project_backend.git"
+  },
+  "license": "ISC",
+  "author": "Diego Gtz de Vel",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint .",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1"
+  }
+}
