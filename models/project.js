@@ -29,4 +29,4 @@ const projectSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('card', cardSchema);
+module.exports = mongoose.model('project', projectSchema);
