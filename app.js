@@ -13,7 +13,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 
-const { PORT = 3000, JwT_SECRET = 'dev-secret' } = process.env;
+const { PORT = 3000 } = process.env;
 
 app.use(express.json());
 

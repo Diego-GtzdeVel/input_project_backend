@@ -10,9 +10,9 @@ module.exports.getProjects = (req, res, next) => {
 };
 
 module.exports.createProject = (req, res, next) => {
-  const { title, text } = req.body;
+  const { title, text, link } = req.body;
 
-  Project.create({ title, text, owner: req.user._id })
+  Project.create({ title, text, link, owner: req.user._id })
     .then((project) => res.status(201).send(project))
     .catch((err) => {
       if (err.name === 'ValidationError') {

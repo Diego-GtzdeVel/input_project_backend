@@ -5,7 +5,6 @@ const {
   deleteProject,
 } = require('../controllers/projects');
 
-
 router.get('/', getProjects);
 
 router.post('/', createProject);
