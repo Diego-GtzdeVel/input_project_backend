@@ -4,6 +4,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const { login, createUser } = require('./controllers/users');
 const usersRouter = require('./routes/users')
@@ -20,6 +21,9 @@ app.use(express.json());
 mongoose.connect('mongodb://localhost:27017/inputdb');
 
 app.use(requestLogger);
+
+app.use(cors());
+app.options('*', cors());
 
 app.post('/signin', login);
 app.post('/signup', createUser);
